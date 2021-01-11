@@ -1,0 +1,165 @@
+@layer base {
+
+    @font-face {
+        font-family: 'RifficFree';
+        src: url('~assets/fonts/RifficFree-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Transat';
+        src: url('~assets/fonts/Transat-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Transat';
+        src: url('~assets/fonts/Transat-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Transat';
+        src: url('~assets/fonts/Transat-Light.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+    }
+    
+    @font-face {
+        font-family: 'DancingScript';
+        src: url('~assets/fonts/DancingScript.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    h1 {
+        @apply pb-6 text-4xl font-title text-center leading-snug text-black;
+    }
+
+    h2 {
+        @apply pb-5 text-3xl font-title text-center leading-tight;
+    }
+
+    a {
+        @apply inline-block relative cursor-pointer no-underline;
+        color: inherit;
+        transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    }
+    
+    a:hover, a:focus {
+        @apply text-orange;
+    }
+
+    section {
+        @apply mx-auto py-12;
+    }
+
+    #content {
+        @apply mx-auto w-full min-h-screen;
+        margin-top: 94px;
+    }
+
+    @media (max-width: 1279px) {
+        h1 {
+            @apply text-3xl;
+        }
+
+        h2 {
+            @apply text-2xl;
+        }
+    }
+
+    @media (max-width: 767px) {}
+
+    @media (max-width: 639px) {
+        h1 {
+            @apply text-2xl;
+        }
+
+        h2 {
+            @apply text-xl;
+        }
+
+        section {
+            @apply py-16;
+        }
+    }
+
+}
+
+
+@layer components {
+
+    /* Buttons */
+
+    .btn {
+        @apply relative inline-block tracking-wide font-semibold text-center align-middle select-none border border-solid border-transparent py-2 px-5 my-2 leading-6 rounded transition-all duration-150 ease-in-out;
+    }
+
+    .btn:not(:last-child) {
+        @apply mr-2;
+    }
+
+    .btn:hover, .btn:active {
+        @apply transform -translate-y-px;
+    }
+
+    .btn-outline-default {
+        @apply text-darkblue border-darkblue;
+    }
+
+    .btn-outline-default:hover, .btn-outline-default:active {
+        @apply text-lightwhite bg-darkblue border-darkblue;
+    }
+
+    .btn-default {
+        @apply text-lightwhite bg-darkblue border-darkblue shadow;
+    }
+
+    .btn-default:hover, .btn-default:active {
+        @apply text-lightwhite bg-darkestblue border-darkestblue;
+    }
+
+    .btn-sm {
+        @apply py-1 px-2;
+    }
+
+    .btn-lg {
+        @apply py-3 px-4;
+    }
+
+    /* Form & Fields */
+
+    .form-label {
+        @apply leading-7 text-gray;
+    }
+
+    .form-input {
+        @apply w-full rounded shadow-sm text-base text-slate outline-none py-1 px-3 mt-1 leading-8 transition-shadow duration-150 ease-in-out;
+    }
+
+    .form-input:focus {
+        @apply shadow;
+    }
+
+    .form-textarea {
+        @apply leading-tight py-2 px-3;
+    }
+
+    /* Heading Decoration */
+
+    .heading-decoration {
+        @apply mb-4 bg-no-repeat bg-bottom;
+        background-size: 15vw 5px;
+        background-image: linear-gradient(transparent calc(100% - 2px), #ffaa00 1px);
+    }
+
+}
