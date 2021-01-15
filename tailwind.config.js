@@ -1,4 +1,12 @@
 module.exports = {
+  purge: [
+    './components/**/*.{vue,js}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}'
+  ],
+  darkMode: false,
   theme: {
     extend: {
       fontFamily: {
@@ -24,7 +32,6 @@ module.exports = {
         lightblack: '#26303c',
         lightwhite: '#f6f8fa',
         secondary: '#f4f5f7',
-        gray: '#6a737d',
         darkgray: '#24292e',
         orange: '#ffaa00',
         darkestblue: '#0e1b30',
@@ -43,20 +50,8 @@ module.exports = {
       }
     }
   },
-  variants: {},
-  plugins: [],
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: [
-      'components/**/*.vue',
-      'layouts/**/*.vue',
-      'pages/**/*.vue',
-      'plugins/**/*.js',
-      'nuxt.config.js'
-    ]
+  variants: {
+    extend: {}
   },
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true
-  }
+  plugins: []
 }

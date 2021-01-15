@@ -19,6 +19,7 @@ export default {
     '~/assets/css/main.css'
   ],
   plugins: [
+    { src: '~/plugins/swiper', mode: 'client' }
   ],
   components: true,
   buildModules: [
