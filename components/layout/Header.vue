@@ -133,11 +133,7 @@ export default {
     }
 
     .nav-link.active {
-        @apply text-orange;
-    }
-
-    .nav-link.active::before {
-        @apply bg-orange;
+        @apply text-red-500;
     }
 
     .nav-link {
