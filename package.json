@@ -24,7 +24,7 @@
     "@nuxt/content": "^1.9.0",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/fontawesome": "^1.1.2",
-    "core-js": "^3.6.5",
+    "core-js": "^3.8.3",
     "nuxt": "^2.14.6",
     "swiper": "^6.4.5",
     "vue-awesome-swiper": "^4.1.1"
