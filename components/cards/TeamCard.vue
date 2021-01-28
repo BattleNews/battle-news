@@ -36,10 +36,6 @@ export default {
       description: 'Background gradient become red (instead of darkblue)',
       default: false,
       required: false
-    },
-    rotate: {
-      type: String,
-      required: true
     }
   },
   data () {
