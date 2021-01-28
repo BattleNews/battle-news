@@ -31,9 +31,6 @@ export default {
     '@nuxtjs/axios',
     '@nuxt/content'
   ],
-  router: {
-    linkExactActiveClass: 'active'
-  },
   fontawesome: {
     component: 'Fa',
     suffix: true,
