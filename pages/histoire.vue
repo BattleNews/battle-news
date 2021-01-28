@@ -27,13 +27,9 @@
 
 <script>
 export default {
-  async fetch () {
-    this.teamMembers = await this.$content('teamMembers').sortBy('rank').fetch()
-  },
-  data () {
-    return {
-      teamMembers: []
-    }
+  async asyncData ({ $content }) {
+    const teamMembers = await $content('teamMembers').sortBy('rank').fetch()
+    return { teamMembers }
   }
 }
 </script>
