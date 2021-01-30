@@ -10,7 +10,7 @@
             <slot />
           </div>
           <div class="absolute -right-3 -top-10 md:-right-10 lg:-right-20 lg:-top-20">
-            <img class="h-32 md:h-44 lg:h-56 w-auto rounded-full" :src="imageUrl">
+            <img class="h-32 md:h-44 lg:h-56 w-auto rounded-full" :src="imageUrl" :alt="`Photo ${name}`">
           </div>
         </div>
       </div>
@@ -28,6 +28,7 @@ export default {
     },
     imageUrl: {
       type: String,
+      required: true,
       description: 'Team profile picture',
       default: ''
     },

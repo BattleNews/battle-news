@@ -10,7 +10,7 @@
             <slot />
           </div>
           <div class="hidden lg:block absolute -right-40 top-2/4 transform -translate-y-2/4 rotate-0">
-            <img class="h-96 w-auto" :src="imageUrl">
+            <img class="h-96 w-auto" :src="imageUrl" :alt="`Visuel carte ${title}`">
           </div>
         </div>
       </div>

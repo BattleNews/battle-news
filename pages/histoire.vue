@@ -17,7 +17,13 @@
         La fine équipe
       </h2>
       <div class="flex flex-wrap justify-center pt-10 lg:pt-20">
-        <TeamCard v-for="(teamMember, index) in teamMembers" :key="index" :is-red="index % 2 == 1" :name="teamMember.name" :image-url="require('~/assets/pictures/'+ teamMember.img)">
+        <TeamCard
+          v-for="(teamMember, index) in teamMembers"
+          :key="index"
+          :is-red="index % 2 == 1"
+          :name="teamMember.name"
+          :image-url="require('~/assets/pictures/'+ teamMember.img)"
+        >
           <nuxt-content :document="teamMember" />
         </TeamCard>
       </div>

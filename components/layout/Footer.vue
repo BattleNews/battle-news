@@ -8,9 +8,9 @@
           </div>
         </div>
         <div class="md:w-1/3 w-full px-4">
-          <h4 class="uppercase font-medium tracking-widest text-white text-lg mb-3">
+          <h3 class="uppercase font-medium tracking-widest text-white text-lg mb-3">
             Coordonnées
-          </h4>
+          </h3>
           <nav class="list-none mb-10">
             <ul>
               <li>
@@ -39,9 +39,9 @@
           </nav>
         </div>
         <div class="md:w-1/3 w-full">
-          <h4 class="uppercase font-medium tracking-widest text-white text-lg mb-3">
+          <h3 class="uppercase font-medium tracking-widest text-white text-lg mb-3">
             + d'infos
-          </h4>
+          </h3>
           <nav class="list-none mb-10">
             <ul>
               <li>
@@ -80,13 +80,13 @@
       </div>
     </div>
     <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col md:flex-row lg:justify-center">
-      <span class="inline-flex lg:hidden md:ml-auto md:mt-0 mb-2 justify-center md:justify-start">
+      <ul class="inline-flex lg:hidden md:ml-auto md:mt-0 mb-2 justify-center md:justify-start">
         <li v-for="(socialMedia, index) in socialMedias" :key="index" class="ml-3 list-none align-top">
           <a :href="socialMedia.url" target="_blank" rel="noopener noreferrer" :aria-label="socialMedia.name">
             <fa-icon class="icon" :icon="['fab', socialMedia.icon]" />
           </a>
         </li>
-      </span>
+      </ul>
       <p class="text-center md:text-left">
         <span>&copy; 2020, Qulture. Tous droits réservés.</span>
         <span>
