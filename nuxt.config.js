@@ -9,7 +9,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Qulture Web Application' }
+      { hid: 'description', name: 'description', content: 'Battle News est un jeu de cartes de 3 à 8 joueurs qui vous plonge dans le monde des médias et de l’information.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
