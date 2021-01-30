@@ -12,7 +12,7 @@
       </NavItem>
     </Nav>
     <NuxtLink to="/" class="relative top-7 w-1/3 md:w-1/5 flex justify-center">
-      <img class="max-h-30" src="~/assets/logo/LOGO_BATTLE_NEWS.png" alt="Logo Battle News">
+      <img class="max-h-30" src="~/assets/logo/LOGO_BATTLE_NEWS.webp" alt="Logo Battle News">
     </NuxtLink>
     <Nav>
       <NavItem href="/partenaires">

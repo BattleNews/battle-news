@@ -1,7 +1,7 @@
 ---
 title: Réfléchissez et misez
 rank: 2
-img: CARD3.png
+img: CARD3.webp
 rotate: '-1'
 ---
 

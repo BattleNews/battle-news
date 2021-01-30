@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="p-4 lg:w-1/2 flex flex-col text-center items-center">
-        <img src="~assets/background/VISUEL_JEU.png" alt="Visuel de la boite du jeu">
+        <img src="~assets/background/VISUEL_JEU.webp" alt="Visuel de la boite du jeu">
       </div>
     </div>
   </BaseSection>

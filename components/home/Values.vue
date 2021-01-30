@@ -3,7 +3,7 @@
     <div class="flex flex-wrap justify-center">
       <div class="p-6 lg:w-1/3 flex flex-col text-center items-center">
         <div class="w-40 h-40 lg:w-56 lg:h-56 inline-flex items-center justify-center my-12 flex-shrink-0">
-          <img src="~assets/background/madeinfrance.png" alt="Made in France">
+          <img src="~assets/background/madeinfrance.webp" alt="Made in France">
         </div>
         <div class="flex flex-col flex-grow">
           <h3 class="text-lightblack text-2xl uppercase tracking-widest mb-3">
@@ -17,7 +17,7 @@
       </div>
       <div class="p-6 lg:w-1/3 mb-0 flex flex-col text-center items-center">
         <div class="w-40 h-40 lg:w-56 lg:h-56 inline-flex items-center justify-center my-12 flex-shrink-0">
-          <img src="~assets/background/ecologique.png" alt="Eco-responsable">
+          <img src="~assets/background/ecologique.webp" alt="Eco-responsable">
         </div>
         <div class="flex flex-col flex-grow">
           <h3 class="text-lightblack text-2xl uppercase tracking-widest mb-3">
@@ -31,7 +31,7 @@
       </div>
       <div class="p-6 lg:w-1/3 flex flex-col text-center items-center">
         <div class="w-40 h-40 lg:w-56 lg:h-56 inline-flex items-center justify-center my-12 flex-shrink-0">
-          <img src="~assets/background/qualite.png" alt="100% Qualitatif">
+          <img src="~assets/background/qualite.webp" alt="100% Qualitatif">
         </div>
         <div class="flex flex-col flex-grow">
           <h3 class="text-lightblack text-2xl uppercase tracking-widest mb-3">

@@ -4,7 +4,7 @@
       <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
         <div class="md:w-1/3 w-full mb-10">
           <div class="w-32 flex-shrink-0 md:mx-0 mx-auto">
-            <img class="border-white border-8 bg-white rounded-full" src="~/assets/logo/LOGO_MOXY_Y.png" alt="Logo Moxy">
+            <img class="border-white border-8 bg-white rounded-full" src="~/assets/logo/LOGO_MOXY_Y.webp" alt="Logo Moxy">
           </div>
         </div>
         <div class="md:w-1/3 w-full px-4">

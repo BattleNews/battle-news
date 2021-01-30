@@ -1,7 +1,7 @@
 ---
 title: À la recherche des Fake News
 rank: 1
-img: CARD2.png
+img: CARD2.webp
 rotate: '2'
 ---
 

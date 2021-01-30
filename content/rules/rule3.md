@@ -1,7 +1,7 @@
 ---
 title: L'issue incertaine
 rank: 3
-img: CARD1.png
+img: CARD1.webp
 rotate: '1'
 ---
 

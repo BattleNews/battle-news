@@ -15,7 +15,7 @@ export default {}
 <style scoped>
     section {
         height: calc(100vh - 94px);
-        background-image: url("~assets/background/HERO_BATTLE_NEWS.png");
+        background-image: url("~assets/background/HERO_BATTLE_NEWS.jpg");
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
