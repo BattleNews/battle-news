@@ -16,7 +16,7 @@ export default {}
     section {
         height: calc(100vh - 94px);
         background-image: url("~assets/background/HERO_BATTLE_NEWS.jpg");
-        background-position: center;
+        background-position: center 50px;
         background-size: cover;
         background-attachment: fixed;
     }

@@ -103,7 +103,7 @@
     /* Buttons */
 
     .btn {
-        @apply relative inline-block tracking-wide font-semibold text-center align-middle select-none border border-solid border-transparent py-2 px-5 my-2 leading-6 rounded transition-all duration-150 ease-in-out;
+        @apply inline-flex tracking-wide font-semibold text-center align-middle select-none border border-solid border-transparent py-2 px-4 my-2 leading-6 rounded-md transition-all duration-150 ease-in-out;
     }
 
     .btn:not(:last-child) {
@@ -131,11 +131,11 @@
     }
 
     .btn-sm {
-        @apply py-1 px-2;
+        @apply py-1 px-3;
     }
 
     .btn-lg {
-        @apply py-3 px-4;
+        @apply py-3 px-5;
     }
 
     /* Form & Fields */
