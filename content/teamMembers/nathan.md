@@ -1,7 +1,7 @@
 ---
 name: Nathan
 rank: 5
-img: anthony.jpg
+img: nathan.jpg
 ---
 
 Intraitable, Nathan est un directeur financier dévoué.   

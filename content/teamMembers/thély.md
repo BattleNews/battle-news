@@ -1,7 +1,7 @@
 ---
 name: Thély
 rank: 6
-img: anthony.jpg
+img: thely.jpg
 ---
 
 Joueuse invétérée, Thély est notre directrice technique et production.  

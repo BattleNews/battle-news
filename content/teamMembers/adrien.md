@@ -1,7 +1,7 @@
 ---
 name: Adrien
 rank: 7
-img: anthony.jpg
+img: adrien.jpg
 ---
 
 Incroyable joueur, Adrien est notre community manager.  

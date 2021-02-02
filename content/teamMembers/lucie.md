@@ -1,7 +1,7 @@
 ---
 name: Lucie
 rank: 3
-img: anthony.jpg
+img: lucie.jpg
 ---
 
 Lucie, c’est un peu la cerise sur le gâteau. Actuellement directrice des Ressources Humaines,
