@@ -15,24 +15,28 @@
             <ul>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'server']" />
-                <span class="text-slate">{{ coordinates.name }}</span>
+                <client-only>
+                  <span class="text-slate">{{ coordinate.name }}</span>
+                </client-only>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'home']" />
-                <span class="text-slate">{{ coordinates.address }}</span>
+                <client-only>
+                  <span class="text-slate">{{ coordinate.address }}</span>
+                </client-only>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'phone-alt']" />
-                <span class="text-slate">{{ coordinates.phone }}</span>
+                <span class="text-slate">{{ coordinate.phone }}</span>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'envelope']" />
-                <a :href="`mailto:${coordinates.mail}`">{{ coordinates.mail }}</a>
+                <a :href="`mailto:${coordinate.mail}`">{{ coordinate.mail }}</a>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'globe-americas']" />
                 <NuxtLink to="/">
-                  {{ coordinates.domain }}
+                  {{ coordinate.domain }}
                 </NuxtLink>
               </li>
             </ul>
@@ -88,7 +92,7 @@
         </li>
       </ul>
       <p class="text-center md:text-left">
-        <span>&copy; 2020, Qulture. Tous droits réservés.</span>
+        <span>&copy; {{ new Date().getFullYear() }}, {{ coordinate.name }}. Tous droits réservés.</span>
         <span>
           — Réalisation :
           <a href="https://github.com/et3rnity45" rel="noopener noreferrer" class="ml-1" target="_blank">Quentin Liger</a>
@@ -102,12 +106,12 @@
 export default {
   async fetch () {
     this.socialMedias = await this.$content('socialMedias').sortBy('name').fetch()
-    this.coordinates = await this.$content('coordinates').fetch()
+    this.coordinate = await this.$content('coordinates', 'content').fetch()
   },
   data () {
     return {
       socialMedias: [],
-      coordinates: {}
+      coordinate: {}
     }
   }
 }
