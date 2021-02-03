@@ -15,28 +15,24 @@
             <ul>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'server']" />
-                <client-only>
-                  <span class="text-slate">Hello</span>
-                </client-only>
+                <span class="text-slate">{{ coordinates[0].name }}</span>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'home']" />
-                <client-only>
-                  <span class="text-slate">Hello</span>
-                </client-only>
+                <span class="text-slate">{{ coordinates[0].address }}</span>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'phone-alt']" />
-                <span class="text-slate">Hello</span>
+                <span class="text-slate">{{ coordinates[0].phone }}</span>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'envelope']" />
-                <a :href="`mailto:Hello`">Hello</a>
+                <a :href="`mailto:${coordinates[0].mail}`">{{ coordinates[0].mail }}</a>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'globe-americas']" />
                 <NuxtLink to="/">
-                  Hello
+                  {{ coordinates[0].domain }}
                 </NuxtLink>
               </li>
             </ul>
@@ -92,7 +88,7 @@
         </li>
       </ul>
       <p class="text-center md:text-left">
-        <span>&copy; {{ new Date().getFullYear() }}, Hello. Tous droits réservés.</span>
+        <span>&copy; {{ new Date().getFullYear() }}, {{ coordinates[0].name }}. Tous droits réservés.</span>
         <span>
           — Réalisation :
           <a href="https://github.com/et3rnity45" rel="noopener noreferrer" class="ml-1" target="_blank">Quentin Liger</a>
@@ -111,7 +107,7 @@ export default {
   data () {
     return {
       socialMedias: [],
-      coordinates: {}
+      coordinates: []
     }
   }
 }
