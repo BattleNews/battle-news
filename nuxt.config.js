@@ -19,7 +19,7 @@ export default {
     '~/assets/css/main.css'
   ],
   plugins: [
-    { src: '~/plugins/swiper', mode: 'client' }
+    { src: '~/plugins/youtube', mode: 'client' }
   ],
   components: true,
   buildModules: [
