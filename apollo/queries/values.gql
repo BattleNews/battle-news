@@ -1,0 +1,10 @@
+query Values {
+  values {
+    id
+    title
+    image {
+      url
+    }
+    content
+  }
+}

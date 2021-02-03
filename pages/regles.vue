@@ -2,26 +2,33 @@
   <div class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44 overflow-hidden">
     <BaseSection class="mt-14 lg:mt-28" title="Les Règles du Jeu">
       <div class="flex flex-wrap justify-center pt-10 lg:pt-20">
-        <RulesCard
-          v-for="(rule, index) in rules"
-          :key="index"
-          :is-red="index % 2 == 1"
-          :title="rule.title"
-          :image-url="require('~/assets/background/'+ rule.img)"
-          :rotate="rule.rotate"
-        >
-          <nuxt-content :document="rule" />
-        </RulesCard>
+        <client-only>
+          <RulesCard
+            v-for="(rule, index) in rules"
+            :key="rule.id"
+            :rule="rule"
+            :is-red="index % 2 == 1"
+          />
+        </client-only>
       </div>
     </BaseSection>
   </div>
 </template>
 
 <script>
+import rulesQuery from '~/apollo/queries/rules'
+
 export default {
-  async asyncData ({ $content }) {
-    const rules = await $content('rules').sortBy('rank').fetch()
-    return { rules }
+  data () {
+    return {
+      rules: []
+    }
+  },
+  apollo: {
+    rules: {
+      prefetch: true,
+      query: rulesQuery
+    }
   }
 }
 </script>

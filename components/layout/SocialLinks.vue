@@ -11,13 +11,17 @@
 </template>
 
 <script>
+import socialMediasQuery from '~/apollo/queries/social-medias'
+
 export default {
-  async fetch () {
-    this.socialMedias = await this.$content('socialMedias').sortBy('name').fetch()
-  },
   data () {
     return {
       socialMedias: []
+    }
+  },
+  apollo: {
+    socialMedias: {
+      query: socialMediasQuery
     }
   }
 }

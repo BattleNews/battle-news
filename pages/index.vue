@@ -8,18 +8,19 @@
         v-for="(value, index) in values"
         :key="index"
         :title="value.title"
-        :image-url="require('~/assets/background/'+ value.img)"
+        :image-url="getStrapiMedia(value.image.url)"
       >
-        <nuxt-content :document="value" />
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <div v-html="$md.render(value.content)" />
       </Value>
     </Values>
     <Statistiques>
       <Statistique
-        v-for="(stat, index) in stats"
+        v-for="(statistic, index) in statistics"
         :key="index"
-        :title="stat.title"
-        :number="stat.number"
-        :icon="require('~/assets/icon/' + stat.icon)"
+        :title="statistic.title"
+        :number="statistic.number"
+        :icon="getStrapiMedia(statistic.icon.url)"
       />
     </Statistiques>
     <YoutubeMedia />
@@ -27,11 +28,27 @@
 </template>
 
 <script>
+import valuesQuery from '~/apollo/queries/values'
+import statsQuery from '~/apollo/queries/stats'
+import { getStrapiMedia } from '~/utils/medias'
+
 export default {
-  async asyncData ({ $content }) {
-    const values = await $content('values').sortBy('rank').fetch()
-    const stats = await $content('stats').sortBy('rank').fetch()
-    return { values, stats }
+  data () {
+    return {
+      values: [],
+      statistics: []
+    }
+  },
+  apollo: {
+    values: {
+      query: valuesQuery
+    },
+    statistics: {
+      query: statsQuery
+    }
+  },
+  methods: {
+    getStrapiMedia
   }
 }
 </script>

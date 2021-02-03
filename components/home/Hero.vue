@@ -1,9 +1,7 @@
 <template>
   <section id="hero" class="hidden xl:block mb-12">
     <div class="middle">
-      <NuxtLink to="/jeu" class="rounded-xl bg-darkestblue text-lightwhite py-4 px-12 text-xl font-title uppercase tracking-widest">
-        Acheter le jeu
-      </NuxtLink>
+      <!-- TODO : Rajouter un bouton de scroll vers le bas -->
     </div>
   </section>
 </template>

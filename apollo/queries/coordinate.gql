@@ -1,0 +1,10 @@
+query Coordinates {
+  coordinate(id: 1) {
+    id
+    namespace
+    address
+    phone
+    mail
+    domain
+  }
+}

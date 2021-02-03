@@ -4,13 +4,18 @@
       <div class="px-10 py-12 rounded-3xl shadow-2xl text-lightwhite transform bg-gradient-to-br" :class="[isRed ? 'from-darkred to-lightred' : 'from-darkestblue to-darkblue', rotation[rotate]]">
         <div class="lg:pr-32">
           <h3 class="leading-loose">
-            {{ title }}
+            {{ rule.title }}
           </h3>
           <div class="text-xl sm:text-3xl sm:leading-relaxed mb-10 sm:mb-11">
-            <slot />
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <div v-html="$md.render(rule.content)" />
           </div>
           <div class="hidden lg:block absolute -right-40 top-2/4 transform -translate-y-2/4 rotate-0">
-            <img class="h-96 w-auto" :src="imageUrl" :alt="`Visuel carte ${title}`">
+            <img
+              :src="getStrapiMedia(rule.image.url)"
+              :alt="rule.title"
+              class="h-96 w-auto"
+            >
           </div>
         </div>
       </div>
@@ -19,27 +24,19 @@
 </template>
 
 <script>
+import { getStrapiMedia } from '~/utils/medias'
 
 export default {
   props: {
-    title: {
-      type: String,
+    rule: {
+      type: Object,
       required: true
-    },
-    imageUrl: {
-      type: String,
-      description: 'Side card image',
-      default: ''
     },
     isRed: {
       type: Boolean,
       description: 'Background gradient become red (instead of darkblue)',
       default: false,
       required: false
-    },
-    rotate: {
-      type: String,
-      required: true
     }
   },
   data () {
@@ -51,6 +48,9 @@ export default {
         2: 'rotate-1 sm:rotate-2'
       }
     }
+  },
+  methods: {
+    getStrapiMedia
   }
 }
 </script>

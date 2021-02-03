@@ -1,0 +1,8 @@
+query SocialMedias {
+  socialMedias {
+    id
+    name
+    url
+    icon
+  }
+}

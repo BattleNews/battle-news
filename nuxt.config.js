@@ -26,9 +26,25 @@ export default {
     '@nuxtjs/fontawesome'
   ],
   modules: [
-    '@nuxtjs/axios',
-    '@nuxt/content'
+    '@nuxtjs/apollo',
+    '@nuxtjs/markdownit'
   ],
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.BACKEND_URL || 'http://localhost:1337/graphql'
+      }
+    }
+  },
+  env: {
+    strapiBaseUri: process.env.API_URL || 'http://localhost:1337'
+  },
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true
+  },
   fontawesome: {
     component: 'Fa',
     suffix: true,
@@ -37,12 +53,6 @@ export default {
       brands: true
     }
   },
-  // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
-
-  // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
-
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }
