@@ -18,9 +18,7 @@ export default {
   css: [
     '~/assets/css/main.css'
   ],
-  plugins: [
-    { src: '~/plugins/swiper', mode: 'client' }
-  ],
+  plugins: [],
   components: true,
   buildModules: [
     '@nuxtjs/eslint-module',

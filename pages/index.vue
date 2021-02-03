@@ -20,18 +20,14 @@
         :title="stat.title"
         :number="stat.number"
         :icon="require('~/assets/icon/' + stat.icon)"
-      >
-        Hello
-      </Statistique>
+      />
     </Statistiques>
-    <InstagramFeed />
+    <YoutubeMedia />
   </div>
 </template>
 
 <script>
-import Statistique from '~/components/home/Statistique.vue'
 export default {
-  components: { Statistique },
   async asyncData ({ $content }) {
     const values = await $content('values').sortBy('rank').fetch()
     const stats = await $content('stats').sortBy('rank').fetch()
