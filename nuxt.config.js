@@ -18,9 +18,7 @@ export default {
   css: [
     '~/assets/css/main.css'
   ],
-  plugins: [
-    { src: '~/plugins/youtube', mode: 'client' }
-  ],
+  plugins: [],
   components: true,
   buildModules: [
     '@nuxtjs/eslint-module',
