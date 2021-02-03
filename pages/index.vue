@@ -7,19 +7,14 @@
       <Value
         v-for="(value, index) in values"
         :key="index"
-        :title="value.title"
-        :image-url="require('~/assets/background/'+ value.img)"
-      >
-        <nuxt-content :document="value" />
-      </Value>
+        :value="value"
+      />
     </Values>
     <Statistiques>
       <Statistique
         v-for="(stat, index) in stats"
         :key="index"
-        :title="stat.title"
-        :number="stat.number"
-        :icon="require('~/assets/icon/' + stat.icon)"
+        :stat="stat"
       />
     </Statistiques>
     <YoutubeMedia />

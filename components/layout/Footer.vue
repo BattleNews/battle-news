@@ -16,27 +16,27 @@
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'server']" />
                 <client-only>
-                  <span class="text-slate">{{ coordinate.name }}</span>
+                  <span class="text-slate">Hello</span>
                 </client-only>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'home']" />
                 <client-only>
-                  <span class="text-slate">{{ coordinate.address }}</span>
+                  <span class="text-slate">Hello</span>
                 </client-only>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'phone-alt']" />
-                <span class="text-slate">{{ coordinate.phone }}</span>
+                <span class="text-slate">Hello</span>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'envelope']" />
-                <a :href="`mailto:${coordinate.mail}`">{{ coordinate.mail }}</a>
+                <a :href="`mailto:Hello`">Hello</a>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'globe-americas']" />
                 <NuxtLink to="/">
-                  {{ coordinate.domain }}
+                  Hello
                 </NuxtLink>
               </li>
             </ul>
@@ -92,7 +92,7 @@
         </li>
       </ul>
       <p class="text-center md:text-left">
-        <span>&copy; {{ new Date().getFullYear() }}, {{ coordinate.name }}. Tous droits réservés.</span>
+        <span>&copy; {{ new Date().getFullYear() }}, Hello. Tous droits réservés.</span>
         <span>
           — Réalisation :
           <a href="https://github.com/et3rnity45" rel="noopener noreferrer" class="ml-1" target="_blank">Quentin Liger</a>
@@ -106,12 +106,12 @@
 export default {
   async fetch () {
     this.socialMedias = await this.$content('socialMedias').sortBy('name').fetch()
-    this.coordinate = await this.$content('coordinates', 'content').fetch()
+    this.coordinates = await this.$content('coordinates').fetch()
   },
   data () {
     return {
       socialMedias: [],
-      coordinate: {}
+      coordinates: {}
     }
   }
 }
