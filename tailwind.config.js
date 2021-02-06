@@ -42,6 +42,9 @@ module.exports = {
         slate: '#8892b0',
         lightslate: '#a8b2d1'
       },
+      transitionProperty: {
+        maxHeight: 'max-height'
+      },
       transitionDuration: {
         250: '250ms'
       },
