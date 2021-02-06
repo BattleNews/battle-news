@@ -12,7 +12,7 @@
     </div>
     <div class="max-h-0 overflow-hidden transition-maxHeight duration-700" :class="[isOpened ? 'max-h-96' : '']">
       <div class="rounded-lg px-8 pb-8 pt-4">
-        <nuxt-content class="font-light text-gray-700" :document="question" />
+        <nuxt-content class="text-lg md:text-xl font-light text-gray-700" :document="question" />
       </div>
     </div>
   </div>
