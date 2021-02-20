@@ -14,7 +14,7 @@
         />
       </svg>
     </div>
-    <div class="container mx-auto py-12 text-white">
+    <div class="container mx-auto py-12 text-white lg:px-6">
       <h2 class="text-lightwhite">
         {{ title }}
       </h2>

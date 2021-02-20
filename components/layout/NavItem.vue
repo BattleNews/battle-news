@@ -1,5 +1,5 @@
 <template>
-  <li class="text-sm uppercase mx-8 py-8">
+  <li class="text-xs xl:text-sm uppercase mx-4 2xl:mx-8 py-8">
     <NuxtLink
       :to="href"
       class="nav-link relative tracking-widest"

@@ -63,6 +63,11 @@ export default {
     return {
       menuOpen: false
     }
+  },
+  watch: {
+    '$route' () {
+      this.menuOpen = false
+    }
   }
 }
 </script>

@@ -26,7 +26,7 @@ export default {
 <style scoped>
     .side {
         bottom: 0;
-        left: 40px;
+        left: 20px;
         right: auto;
     }
 
