@@ -1,5 +1,5 @@
 ---
-title: Pourquoi Battle News ?
+title: J'aimerais en savoir plus sur les faits, où puis-je trouver vos sources ?
 rank: 8
 ---
 

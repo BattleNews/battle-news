@@ -26,7 +26,6 @@ export default {
     '@nuxtjs/fontawesome'
   ],
   modules: [
-    '@nuxtjs/axios',
     '@nuxt/content'
   ],
   fontawesome: {
