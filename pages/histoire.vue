@@ -18,24 +18,29 @@
       </h2>
       <div class="flex flex-wrap justify-center pt-10 lg:pt-20">
         <TeamCard
-          v-for="(teamMember, index) in teamMembers"
+          v-for="(teamMember, index) in members"
           :key="index"
+          :team-member="teamMember"
           :is-red="index % 2 == 1"
-          :name="teamMember.name"
-          :image-url="require('~/assets/pictures/'+ teamMember.img)"
-        >
-          <nuxt-content :document="teamMember" />
-        </TeamCard>
+        />
       </div>
     </BaseSection>
   </div>
 </template>
 
 <script>
+import membersQuery from '~/apollo/queries/members'
+
 export default {
-  async asyncData ({ $content }) {
-    const teamMembers = await $content('teamMembers').sortBy('rank').fetch()
-    return { teamMembers }
+  data () {
+    return {
+      members: []
+    }
+  },
+  apollo: {
+    members: {
+      query: membersQuery
+    }
   }
 }
 </script>

@@ -15,24 +15,24 @@
             <ul>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'server']" />
-                <span class="text-slate">{{ coordinates[0].name }}</span>
+                <span class="text-slate">{{ coordinate.namespace }}</span>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'home']" />
-                <span class="text-slate">{{ coordinates[0].address }}</span>
+                <span class="text-slate">{{ coordinate.address }}</span>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'phone-alt']" />
-                <span class="text-slate">{{ coordinates[0].phone }}</span>
+                <span class="text-slate">{{ coordinate.phone }}</span>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'envelope']" />
-                <a :href="`mailto:${coordinates[0].mail}`">{{ coordinates[0].mail }}</a>
+                <a :href="`mailto:${coordinate.mail}`">{{ coordinate.mail }}</a>
               </li>
               <li>
                 <fa-icon class="w-4 h-4 inline-flex mr-1" :icon="['fas', 'globe-americas']" />
                 <NuxtLink to="/">
-                  {{ coordinates[0].domain }}
+                  {{ coordinate.domain }}
                 </NuxtLink>
               </li>
             </ul>
@@ -88,7 +88,7 @@
         </li>
       </ul>
       <p class="text-center md:text-left">
-        <span>&copy; {{ new Date().getFullYear() }}, {{ coordinates[0].name }}. Tous droits réservés.</span>
+        <span>&copy; {{ new Date().getFullYear() }}, {{ coordinate.namespace }}. Tous droits réservés.</span>
         <span>
           — Réalisation :
           <a href="https://github.com/et3rnity45" rel="noopener noreferrer" class="ml-1" target="_blank">Quentin Liger</a>
@@ -99,15 +99,22 @@
 </template>
 
 <script>
+import coordinateQuery from '~/apollo/queries/coordinate'
+import socialMediasQuery from '~/apollo/queries/social-medias'
+
 export default {
-  async fetch () {
-    this.socialMedias = await this.$content('socialMedias').sortBy('name').fetch()
-    this.coordinates = await this.$content('coordinates').fetch()
-  },
   data () {
     return {
       socialMedias: [],
-      coordinates: []
+      coordinate: {}
+    }
+  },
+  apollo: {
+    coordinate: {
+      query: coordinateQuery
+    },
+    socialMedias: {
+      query: socialMediasQuery
     }
   }
 }

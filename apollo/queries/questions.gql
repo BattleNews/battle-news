@@ -1,0 +1,7 @@
+query Questions {
+  question {
+    id
+    title
+    content
+  }
+}

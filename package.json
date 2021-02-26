@@ -5,7 +5,7 @@
   "author": "Quentin Liger <qliger.dev@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/et3rnity45/battle-news"
+    "url": "https://github.com/BattleNews/battle-news"
   },
   "private": true,
   "scripts": {
@@ -21,10 +21,11 @@
     "@fortawesome/fontawesome-free": "^5.15.2",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
-    "@nuxt/content": "^1.12.0",
-    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/apollo": "^4.0.1-rc.5",
     "@nuxtjs/fontawesome": "^1.1.2",
+    "@nuxtjs/markdownit": "^2.0.0",
     "core-js": "^3.8.3",
+    "graphql": "^15.5.0",
     "nuxt": "^2.14.6"
   },
   "devDependencies": {
