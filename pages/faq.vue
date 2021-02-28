@@ -13,10 +13,18 @@
 </template>
 
 <script>
+import questionsQuery from '~/apollo/queries/questions'
+
 export default {
-  async asyncData ({ $content }) {
-    const questions = await $content('faq').sortBy('rank').fetch()
-    return { questions }
+  data () {
+    return {
+      questions: []
+    }
+  },
+  apollo: {
+    questions: {
+      query: questionsQuery
+    }
   }
 }
 </script>

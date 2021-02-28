@@ -12,7 +12,7 @@
     </Values>
     <Statistiques>
       <Statistique
-        v-for="(stat, index) in stats"
+        v-for="(stat, index) in statistics"
         :key="index"
         :stat="stat"
       />
@@ -22,11 +22,27 @@
 </template>
 
 <script>
+import valuesQuery from '~/apollo/queries/values'
+import statsQuery from '~/apollo/queries/statistics'
+import { getStrapiMedia } from '~/utils/medias'
+
 export default {
-  async asyncData ({ $content }) {
-    const values = await $content('values').sortBy('rank').fetch()
-    const stats = await $content('stats').sortBy('rank').fetch()
-    return { values, stats }
+  data () {
+    return {
+      values: [],
+      statistics: []
+    }
+  },
+  apollo: {
+    values: {
+      query: valuesQuery
+    },
+    statistics: {
+      query: statsQuery
+    }
+  },
+  methods: {
+    getStrapiMedia
   }
 }
 </script>

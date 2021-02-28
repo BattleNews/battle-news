@@ -5,23 +5,27 @@
         <RulesCard
           v-for="(rule, index) in rules"
           :key="index"
+          :rule="rule"
           :is-red="index % 2 == 1"
-          :title="rule.title"
-          :image-url="require('~/assets/background/'+ rule.img)"
-          :rotate="rule.rotate"
-        >
-          <nuxt-content :document="rule" />
-        </RulesCard>
+        />
       </div>
     </BaseSection>
   </div>
 </template>
 
 <script>
+import rulesQuery from '~/apollo/queries/rules'
+
 export default {
-  async asyncData ({ $content }) {
-    const rules = await $content('rules').sortBy('rank').fetch()
-    return { rules }
+  data () {
+    return {
+      rules: []
+    }
+  },
+  apollo: {
+    rules: {
+      query: rulesQuery
+    }
   }
 }
 </script>

@@ -1,0 +1,10 @@
+query Statistics {
+  statistics {
+    id
+    title
+    number
+    icon {
+      url
+    }
+  }
+}

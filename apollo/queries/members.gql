@@ -1,0 +1,10 @@
+query Members {
+  members {
+    id
+    firstname
+    image {
+      url
+    }
+    biography
+  }
+}

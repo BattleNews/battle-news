@@ -1,0 +1,11 @@
+query Rules {
+  rules {
+    id
+    title
+    image {
+      url
+    }
+    rotation
+    content
+  }
+}
