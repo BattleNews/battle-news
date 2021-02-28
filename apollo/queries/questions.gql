@@ -1,5 +1,5 @@
 query Questions {
-  question {
+  questions {
     id
     title
     content

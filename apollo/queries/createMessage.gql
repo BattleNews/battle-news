@@ -1,0 +1,8 @@
+mutation CreateMessage ($firstname: String!, $lastname: String!, $email: String!, $content: String!) {
+  post(firstname: $firstname, lastname: $lastname, email: $email, content: $content) {
+    firstname
+    lastname
+    email
+    content
+  }
+}

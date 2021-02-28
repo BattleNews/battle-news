@@ -12,7 +12,8 @@
     </div>
     <div class="max-h-0 overflow-hidden transition-maxHeight duration-700" :class="[isOpened ? 'max-h-96' : '']">
       <div class="rounded-lg px-8 pb-8 pt-4">
-        <nuxt-content class="font-light text-gray-700" :document="question" />
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <div class="font-light text-gray-700" v-html="$md.render(question.content)" />
       </div>
     </div>
   </div>
