@@ -1,0 +1,9 @@
+query Presentation {
+  presentation {
+    id
+    content
+    image {
+      url
+    }
+  }
+}

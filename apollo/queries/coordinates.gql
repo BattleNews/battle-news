@@ -1,5 +1,5 @@
 query Coordinates {
-  coordinate(id: 1) {
+  coordinate {
     id
     namespace
     address

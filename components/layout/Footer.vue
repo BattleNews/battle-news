@@ -99,7 +99,7 @@
 </template>
 
 <script>
-import coordinateQuery from '~/apollo/queries/coordinate'
+import coordinatesQuery from '~/apollo/queries/coordinates'
 import socialMediasQuery from '~/apollo/queries/social-medias'
 
 export default {
@@ -111,7 +111,7 @@ export default {
   },
   apollo: {
     coordinate: {
-      query: coordinateQuery
+      query: coordinatesQuery
     },
     socialMedias: {
       query: socialMediasQuery

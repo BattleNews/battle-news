@@ -1,5 +1,4 @@
 export default {
-  target: 'static',
   head: {
     htmlAttrs: {
       lang: 'fr'
@@ -53,12 +52,6 @@ export default {
       brands: true
     }
   },
-  // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
-
-  // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
-
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }
