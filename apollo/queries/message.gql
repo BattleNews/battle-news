@@ -1,0 +1,24 @@
+mutation CreateMessage (
+  $firstname: String!
+  $lastname: String!
+  $email: String!
+  $message: String!
+) {
+  createMessage (
+    input: {
+      data: {
+        firstname: $firstname
+        lastname: $lastname
+        email: $email
+        message: $message
+      }
+    }
+  ) {
+    message {
+      firstname
+      lastname
+      email
+      message
+    }
+  }
+}
