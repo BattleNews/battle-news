@@ -1,5 +1,5 @@
 query Members {
-  members {
+  members (sort: "id") {
     id
     firstname
     image {

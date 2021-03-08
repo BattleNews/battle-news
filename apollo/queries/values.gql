@@ -1,5 +1,5 @@
 query Values {
-  values {
+  values (sort: "id") {
     id
     title
     image {

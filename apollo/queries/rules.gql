@@ -1,5 +1,5 @@
 query Rules {
-  rules {
+  rules (sort: "id") {
     id
     title
     image {

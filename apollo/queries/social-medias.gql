@@ -1,5 +1,5 @@
 query SocialMedias {
-  socialMedias {
+  socialMedias (sort: "id") {
     id
     name
     url

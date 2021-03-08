@@ -1,5 +1,5 @@
 query Questions {
-  questions {
+  questions (sort: "id") {
     id
     title
     content

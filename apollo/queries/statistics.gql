@@ -1,5 +1,5 @@
 query Statistics {
-  statistics {
+  statistics (sort: "id") {
     id
     title
     number
