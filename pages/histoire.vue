@@ -1,6 +1,6 @@
 <template>
   <div class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44 overflow-hidden">
-    <BaseSection class="mt-14 lg:mt-28" title="Qui sommes-nous ?">
+    <BaseSection class="mt-14 lg:mt-28" :title="title">
       <div class="mx-auto mt-16 w-full md:w-5/6 lg:w-4/6">
         <div class="mb-16 sm:mb-16 md:mb-32">
           <div class="px-10 py-12 rounded-3xl shadow-2xl text-lightwhite transform bg-gradient-to-br from-darkred to-lightred">
@@ -34,7 +34,13 @@ import membersQuery from '~/apollo/queries/members'
 export default {
   data () {
     return {
+      title: 'Qui sommes-nous ?',
       members: []
+    }
+  },
+  head () {
+    return {
+      title: this.title
     }
   },
   apollo: {

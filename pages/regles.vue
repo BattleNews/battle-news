@@ -1,6 +1,6 @@
 <template>
   <div class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44 overflow-hidden">
-    <BaseSection class="mt-14 lg:mt-28" title="Les Règles du Jeu">
+    <BaseSection class="mt-14 lg:mt-28" :title="title">
       <div class="flex flex-wrap justify-center pt-10 lg:pt-20">
         <RulesCard
           v-for="(rule, index) in rules"
@@ -19,7 +19,13 @@ import rulesQuery from '~/apollo/queries/rules'
 export default {
   data () {
     return {
+      title: 'Les Règles du Jeu',
       rules: []
+    }
+  },
+  head () {
+    return {
+      title: this.title
     }
   },
   apollo: {

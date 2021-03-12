@@ -1,6 +1,6 @@
 <template>
   <div class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44 overflow-hidden">
-    <BaseSection class="mt-14 lg:mt-28" title="Nous contacter">
+    <BaseSection class="mt-14 lg:mt-28" :title="title">
       <div class="flex flex-col text-center w-full">
         <p class="text-md leading-7 text-orange mx-auto sm:text-xl sm:max-w-xl xl:max-w-2xl">
           Une idée de carte ? Des questions sur notre jeu ?
@@ -96,6 +96,7 @@ import CreateMessage from '~/apollo/queries/message'
 export default {
   data () {
     return {
+      title: 'Nous contacter',
       loading: false,
       success: false,
       errored: false,
@@ -137,6 +138,11 @@ export default {
             this.loading = false
           })
       }
+    }
+  },
+  head () {
+    return {
+      title: this.title
     }
   }
 }

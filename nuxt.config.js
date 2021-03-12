@@ -8,7 +8,17 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Battle News est un jeu de cartes de 3 à 8 joueurs qui vous plonge dans le monde des médias et de l’information.' }
+      { hid: 'description', name: 'description', content: 'Battle News est un jeu de cartes de 3 à 8 joueurs qui vous plonge dans le monde des médias et de l’information.' },
+      { hid: 'og-type', property: 'og:type', content: 'website' },
+      { hid: 'og-url', property: 'og:url', content: 'https://battlenews.fr/' },
+      { hid: 'og-title', property: 'og:title', content: 'Accueil - BattleNews' },
+      { hid: 'og-description', property: 'og:description', content: 'Battle News est un jeu de cartes de 3 à 8 joueurs qui vous plonge dans le monde des médias et de l’information.' },
+      { hid: 'og-image', property: 'og:image', content: '/HERO_BATTLE_NEWS.jpg' },
+      { hid: 'twitter-card', property: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter-url', property: 'twitter:url', content: 'https://battlenews.fr/' },
+      { hid: 'twitter-title', property: 'twitter:title', content: 'Accueil - Battlenews' },
+      { hid: 'twitter-description', property: 'twitter:description', content: 'Battle News est un jeu de cartes de 3 à 8 joueurs qui vous plonge dans le monde des médias et de l’information.' },
+      { hid: 'twitter-image', property: 'twitter:image', content: '/HERO_BATTLE_NEWS.jpg' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
