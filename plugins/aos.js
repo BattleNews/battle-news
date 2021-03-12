@@ -17,7 +17,7 @@ export default ({ app }) => {
     delay: 0,
     duration: 800,
     easing: 'ease',
-    once: false,
+    once: true,
     mirror: false,
     anchorPlacement: 'center-bottom'
   })
