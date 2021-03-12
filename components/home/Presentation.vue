@@ -1,13 +1,13 @@
 <template>
   <BaseSection id="presentation" title="Présentation">
     <div class="flex flex-wrap justify-center">
-      <div class="p-4 lg:w-1/2 mb-0 flex flex-col items-center justify-center">
+      <div class="p-4 lg:w-1/2 mb-0 flex flex-col items-center justify-center" data-aos="slide-right">
         <div class="leading-relaxed text-gray-500 text-xl">
           <!-- eslint-disable-next-line vue/no-v-html -->
           <div v-html="$md.render(presentation.content)" />
         </div>
       </div>
-      <div class="p-4 lg:w-1/2 flex flex-col text-center items-center">
+      <div class="p-4 lg:w-1/2 flex flex-col text-center items-center" data-aos="slide-left">
         <img :src="getStrapiMedia(presentation.image.url)" alt="Visuel de la boite du jeu">
       </div>
     </div>

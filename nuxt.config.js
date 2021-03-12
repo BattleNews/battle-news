@@ -16,7 +16,7 @@ export default {
       { hid: 'og-image', property: 'og:image', content: 'https://battlenews.fr/HERO_BATTLE_NEWS.jpg' },
       { hid: 'twitter-card', property: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter-url', property: 'twitter:url', content: 'https://battlenews.fr/' },
-      { hid: 'twitter-title', property: 'twitter:title', content: 'Accueil - Battlenews' },
+      { hid: 'twitter-title', property: 'twitter:title', content: 'Accueil - BattleNews' },
       { hid: 'twitter-description', property: 'twitter:description', content: 'Battle News est un jeu de cartes de 3 à 8 joueurs qui vous plonge dans le monde des médias et de l’information.' },
       { hid: 'twitter-image', property: 'twitter:image', content: 'https://battlenews.fr/HERO_BATTLE_NEWS.jpg' }
     ],
@@ -27,7 +27,9 @@ export default {
   css: [
     '~/assets/css/main.css'
   ],
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/aos', ssr: false }
+  ],
   components: true,
   buildModules: [
     '@nuxtjs/eslint-module',

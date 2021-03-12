@@ -7,6 +7,7 @@
           :key="index"
           :rule="rule"
           :is-red="index % 2 == 1"
+          :data-aos="index % 2 ? 'fade-left' : 'fade-right'"
         />
       </div>
     </BaseSection>
@@ -25,7 +26,11 @@ export default {
   },
   head () {
     return {
-      title: this.title
+      title: this.title,
+      meta: [
+        { hid: 'og-title', property: 'og:title', content: this.title + ' - BattleNews' },
+        { hid: 'twitter-title', property: 'twitter:title', content: this.title + ' - BattleNews' }
+      ]
     }
   },
   apollo: {

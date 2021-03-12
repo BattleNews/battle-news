@@ -8,6 +8,9 @@
         v-for="(value, index) in values"
         :key="index"
         :value="value"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        :data-aos-delay="index * 100"
       />
     </Values>
     <Statistiques>
@@ -15,6 +18,8 @@
         v-for="(stat, index) in statistics"
         :key="index"
         :stat="stat"
+        data-aos="flip-up"
+        :data-aos-delay="index * 100"
       />
     </Statistiques>
     <YoutubeMedia />

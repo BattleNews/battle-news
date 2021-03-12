@@ -19,7 +19,14 @@
           <div v-if="errored" class="rounded bg-red-400 text-lg p-4">
             Oops! Votre message n'a pas pu être envoyé. Avez-vous rempli tout les champs?
           </div>
-          <form v-else id="contact-form" class="flex flex-wrap bg-secondary shadow-lg rounded px-4 py-10 sm:p-10" role="form" @submit.prevent="submitForm">
+          <form
+            v-else
+            id="contact-form"
+            class="flex flex-wrap bg-secondary shadow-lg rounded px-4 py-10 sm:p-10"
+            role="form"
+            data-aos="fade-up"
+            @submit.prevent="submitForm"
+          >
             <div class="w-full sm:w-1/2 px-4 mb-4">
               <label for="firstname" class="form-label">Prénom</label>
               <input
@@ -142,7 +149,11 @@ export default {
   },
   head () {
     return {
-      title: this.title
+      title: this.title,
+      meta: [
+        { hid: 'og-title', property: 'og:title', content: this.title + ' - BattleNews' },
+        { hid: 'twitter-title', property: 'twitter:title', content: this.title + ' - BattleNews' }
+      ]
     }
   }
 }
