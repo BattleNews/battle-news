@@ -4,7 +4,7 @@ import 'aos/dist/aos.css'
 export default ({ app }) => {
   // eslint-disable-next-line new-cap
   app.AOS = new AOS.init({
-    disable: 'phone',
+    disable: false,
     startEvent: 'DOMContentLoaded',
     initClassName: 'aos-init',
     animatedClassName: 'aos-animate',
