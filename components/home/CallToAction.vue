@@ -6,7 +6,7 @@
         <span class="block text-darkred">Vous pouvez participer au crowdfunding.</span>
       </h3>
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-        <a href="#" class="btn btn-lg btn-default text-xl uppercase">
+        <a href="https://www.ulule.com/battlenews/" target="_blank" rel="noopener noreferrer" aria-label="Ulule" class="btn btn-lg btn-default text-xl uppercase">
           Pré-commander le jeu
         </a>
       </div>
